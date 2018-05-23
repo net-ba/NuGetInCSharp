@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.3;net462</TargetFrameworks>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <s Condition="'$(s)'==''"></s>
+    <Description>This package is example purposes only. It is not intended to be used in production.
+This package is generated out of the csproj `Project Sdk='Microsoft.NET.Sdk'`.</Description>
+    <Product>example only - do not use it in production</Product>
+    <Company>Kistler</Company>
+    <Authors>Michal Svoboda</Authors>
+    <RepositoryUrl>https://github.com/net-ba/NuGetInCSharp.git</RepositoryUrl>
+    <PackageTags>example;do-not-use;</PackageTags>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <OutputPath>..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="5.0.0-beta08" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kistler.Example.LoggingService\Kistler.Example.LoggingService.csproj" />
+  </ItemGroup>
+</Project>
